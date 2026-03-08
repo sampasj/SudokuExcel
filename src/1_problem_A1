@@ -1,0 +1,3 @@
+=REDUCE( "", Sheet1!$A$1:$I$9,
+    LAMBDA(acc,x, VSTACK(acc, HSTACK(ROW(x)-1,COLUMN(x)-1,x)))
+)

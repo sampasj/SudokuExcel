@@ -1,0 +1,5 @@
+名前: areano
+
+コメント: [y / 3] * 3 + [x / 3]
+
+参照範囲: =LAMBDA(row,col,INT(row / 3) * 3 + INT(col / 3))

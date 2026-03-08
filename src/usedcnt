@@ -1,0 +1,5 @@
+名前: usedcnt
+
+コメント: 使用済み数字の個数の配列
+
+参照範囲: =LAMBDA(sp,board,BYROW(sp, LAMBDA(r, LET(row, INDEX(r, , 1), col, INDEX(r, , 2), cnt, COUNT(used(board, row, col)), cnt))))

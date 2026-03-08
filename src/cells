@@ -1,0 +1,5 @@
+名前: cells
+
+コメント: 00～88までの81個の配列
+
+参照範囲: =LAMBDA(LET(x, SEQUENCE(9, , 0), y, TRANSPOSE(SEQUENCE(9, , 0)), xy, x & y & ";", all, CONCAT(xy), TEXTSPLIT(all, , ";", TRUE)))

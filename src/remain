@@ -1,0 +1,5 @@
+名前: remain
+
+コメント: 差集合
+
+参照範囲: =LAMBDA(full,used,FILTER(full, ISNA(MATCH(full, used, 0))))

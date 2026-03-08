@@ -1,0 +1,8 @@
+=LET(
+     problem, problem!I1#,
+     solutions, SolveSudoku36(problem),
+     IF(COUNT(solutions) = 0,
+        "解が見つかりませんでした。",
+        solutions
+     )
+)

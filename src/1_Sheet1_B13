@@ -1,0 +1,6 @@
+=MAKEARRAY(9, 9, LAMBDA(r,c,
+    LET(
+        solutions, Sheet81!$A$1#,
+        FILTER(INDEX(solutions,,3), (INDEX(solutions,,1)=r - 1) * (INDEX(solutions,,2)=c - 1), "")
+    )
+))

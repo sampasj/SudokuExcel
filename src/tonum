@@ -1,0 +1,5 @@
+名前: tonum
+
+コメント: 文字列型を数値型に変換
+
+参照範囲: =LAMBDA(str,MAP(str, LAMBDA(s, VALUE(s))))

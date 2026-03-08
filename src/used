@@ -1,0 +1,5 @@
+名前: used
+
+コメント: 使用済みの数字
+
+参照範囲: =LAMBDA(board,row,col,UNIQUE(VSTACK(samerow(board, row, col), samecol(board, row, col), samearea(board, row, col))))

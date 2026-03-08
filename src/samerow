@@ -1,0 +1,5 @@
+名前: samerow
+
+コメント: 同じ行の数字
+
+参照範囲: =LAMBDA(board,row,col,LET(x, FILTER(board, INDEX(board, , 1) = row, ""), IF(COUNT(x) = 0, "", CHOOSECOLS(x, 3))))

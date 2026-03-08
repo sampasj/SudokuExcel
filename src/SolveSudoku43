@@ -1,0 +1,5 @@
+名前: SolveSudoku43
+
+コメント: 
+
+参照範囲: =LAMBDA(board,IF(ROWS(board) > 42, board, LET(sp, spacecells(board), uc, usedcnt(sp, board), mx, MAX(uc), IF(mx > 8, "", LET(tcell, LET(cntboard, HSTACK(sp, uc), XLOOKUP(mx, CHOOSECOLS(cntboard, 3), CHOOSECOLS(cntboard, 1, 2))), row, INDEX(tcell, , 1), col, INDEX(tcell, , 2), num, remain(SEQUENCE(9), used(board, row, col)), newmasu, REDUCE("", num, LAMBDA(acc,n, LET(new, HSTACK(tcell, n), IF(COUNT(acc) = 0, new, VSTACK(acc, new))))), rnum, ROWS(newmasu), REDUCE("", SEQUENCE(rnum), LAMBDA(acc,n, LET(result, SolveSudoku43(VSTACK(board, CHOOSEROWS(newmasu, n))), IF(ROWS(result) > 42, IF(COUNT(acc) = 0, result, HSTACK(acc, result)), IF(ROWS(result) > ROWS(acc), result, acc))))))))))

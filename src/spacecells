@@ -1,0 +1,5 @@
+名前: spacecells
+
+コメント: 
+
+参照範囲: =LAMBDA(board,LET(x, CHOOSECOLS(board, 1), y, CHOOSECOLS(board, 2), z, remain(cells(), x & y), s, CONCAT(LEFT(z, 1) & "," & RIGHT(z, 1) & ";"), ss, LEFT(s, LEN(s) - 1), tonum(TEXTSPLIT(ss, ",", ";"))))

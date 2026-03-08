@@ -1,0 +1,15 @@
+=LET(
+     board43, Sheet43!$A$1#,
+     cols, COLUMNS(board43),
+     REDUCE("", SEQUENCE(cols / 3),
+         LAMBDA(acc,n,
+            LET(
+                solutions, SolveSudoku62(CHOOSECOLS(board43, 3 * n - 2, 3 * n - 1, 3 * n)),
+                IF(COUNT(acc) = 0,
+                    IF(COUNT(solutions) = 0, acc, solutions),
+                    IF(COUNT(solutions) = 0, acc, HSTACK(acc, solutions))
+                )
+            )
+         )
+     )
+)
